@@ -85,19 +85,21 @@ h6 {
 
 .parent-container {
     display: grid;
-    grid-template-columns: 1fr  1fr;
-    grid-template-areas: "contacts photo";
+    /*grid-template-columns: 1fr  1fr;*/
+    /*    grid-template-columns: 30%  70%;*/
+
+    grid-template-areas: "photo contacts";
     height: 100vh;
 
 }
 
-.picture-container {
-    grid-area: 1 / 1 / 2 / 2;
-}
+/*.picture-container {*/
+/*    grid-area: 1 / 1 / 2 / 2;*/
+/*}*/
 
-.contacts-container {
-   grid-area: 1 / 2 / 2 / 3;
-}
+/*.contacts-container {*/
+/*   grid-area: 1 / 2 / 2 / 3;*/
+/*}*/
 
 
 .block {
@@ -200,8 +202,7 @@ h6 {
 @media screen and (max-width: 1000px) {
     .parent-container {
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "photo contacts"
-                            "form form";
+        grid-template-areas: "contacts photo";
     }
 
     .form-container > h3 {
@@ -214,8 +215,7 @@ h6 {
     .parent-container {
         grid-template-columns: 1fr;
         grid-template-areas: "photo" 
-                            "contacts"
-                            "form";
+                            "contacts";
     }
 
     .social-links > h3:first-child {
@@ -227,10 +227,11 @@ h6 {
         padding: 5% 0 0 0;
     }
 
-    .form-container > h3 {
+    .social-links {
         text-align: center;
-        margin: 0 0 5% 0;
+        padding: 5% 0 0 0;
     }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -240,7 +241,4 @@ h6 {
         padding: 5% 0 0 0;
     }
 
-    .form-container > h3 {
-        text-align: left;
-    }
 }
